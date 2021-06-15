@@ -23,6 +23,10 @@
 	font-size: 4rem;
 }
 
+.motion_text span {
+	float: left;
+}
+
 .title,
 .description {
 	text-align: center;

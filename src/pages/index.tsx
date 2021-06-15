@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
+import TextBob from '../components/TextBob'
 
 const Home: React.FC = () => {
 	return (
@@ -11,7 +12,9 @@ const Home: React.FC = () => {
 			</Head>
 
 			<main className={styles.main}>
-				<h1 className={styles.title}>Soon!</h1>
+				<h1 className={`${styles.title} ${styles.motion_text}`}>
+					<TextBob text="Soon!" maxBob={5} />
+				</h1>
 
 				<h3 className={styles.description}>
 					<a href="https://github.com/nicolasdschmidt">
