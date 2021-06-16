@@ -1,5 +1,5 @@
 import React from 'react'
-import LetterBob from '../components/LetterBob'
+import LetterBob from './LetterBob'
 
 type Props = {
 	text: string
