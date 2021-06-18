@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss'
 import { getAllPosts } from '../scripts/getAllPosts'
 import { Post } from '../types'
 import PostList from '../components/PostList'
+import Header from '../components/Header'
 
 type Props = {
 	posts: Post[]
@@ -15,13 +16,7 @@ const Home: React.FC<Props> = props => {
 		<div className={styles.container}>
 			<Head title="blog" />
 
-			<header className={styles.header}>
-				<h1>hi, i&apos;m nícolas!</h1>
-				<p>
-					and this is where I write about any interesting projects of
-					mine
-				</p>
-			</header>
+			<Header />
 
 			<main className={styles.main}>
 				<PostList posts={props.posts} />
