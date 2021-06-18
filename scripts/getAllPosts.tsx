@@ -1,4 +1,5 @@
 import matter from 'gray-matter'
+
 import { Post } from '../types'
 
 export const getAllPosts = (): Post[] => {

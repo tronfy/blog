@@ -1,11 +1,13 @@
-import { GetStaticProps } from 'next'
 import React from 'react'
+
+import { GetStaticProps } from 'next'
+
 import Head from '../components/Head'
-import styles from '../styles/Home.module.scss'
-import { getAllPosts } from '../scripts/getAllPosts'
-import { Post } from '../types'
-import PostList from '../components/PostList'
 import Header from '../components/Header'
+import PostList from '../components/PostList'
+import { getAllPosts } from '../scripts/getAllPosts'
+import styles from '../styles/Home.module.scss'
+import { Post } from '../types'
 
 type Props = {
 	posts: Post[]
