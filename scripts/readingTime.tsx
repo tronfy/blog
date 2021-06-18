@@ -1,5 +1,3 @@
-import { Post } from '../types'
-
 export const readingTime = (post: Post): number => {
 	const txt = post.markdown
 	const wpm = 160

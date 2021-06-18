@@ -2,7 +2,6 @@ import React from 'react'
 
 import { readingTime } from '../scripts/readingTime'
 import styles from '../styles/PostList.module.scss'
-import { Post } from '../types'
 
 type Props = {
 	posts: Post[]

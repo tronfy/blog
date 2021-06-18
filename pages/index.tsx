@@ -7,7 +7,6 @@ import Header from '../components/Header'
 import PostList from '../components/PostList'
 import { getAllPosts } from '../scripts/getAllPosts'
 import styles from '../styles/Home.module.scss'
-import { Post } from '../types'
 
 type Props = {
 	posts: Post[]
