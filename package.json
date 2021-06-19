@@ -8,7 +8,11 @@
 		"email": "nicolasdschmidt@protonmail.com",
 		"url": "https://github.com/nicolasdschmidt"
 	},
-	"keywords": ["nextjs", "markdown", "blog"],
+	"keywords": [
+		"nextjs",
+		"markdown",
+		"blog"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nicolasdschmidt/blog"
@@ -33,6 +37,7 @@
 		"webpack": "^5.39.0"
 	},
 	"devDependencies": {
+		"@types/glob": "^7.1.3",
 		"@types/node": "^15.12.2",
 		"@types/react": "^17.0.11",
 		"@types/styled-components": "^5.1.10",
