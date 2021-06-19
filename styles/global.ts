@@ -19,6 +19,7 @@ body {
 	text-justify: auto;
 }
 
+
 .container {
 	min-height: 100vh;
 	padding: 6vh 0;
@@ -41,19 +42,28 @@ h3 {
 
 a {
 	color: ${props => props.theme.colors.primary};
-	//text-decoration: underline 1.5pt solid;
-	//text-underline-offset: 2pt;
-	text-decoration: none;
+	text-decoration: underline 1pt solid;
+	border-radius: .2em;
+
+	transition-duration: .2s;
+	transition-timing-function: ease-out;
 }
 
 a:hover {
 	color: ${props => props.theme.colors.background};
 	background: ${props => props.theme.colors.primary};
 	text-decoration: none;
+
+	transition-duration: .2s;
+	transition-timing-function: ease-out;
 }
 
-li {
+ul li {
 	list-style: none;
+}
+
+strong {
+	color: ${props => props.theme.colors.secondary};
 }
 
 ::selection {

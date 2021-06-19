@@ -3,9 +3,11 @@ import React from 'react'
 import glob from 'glob'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import ReactMarkdown from 'react-markdown'
 
 import Head from '../../components/Head'
 import Header from '../../components/Header'
+import styles from '../../styles/PostPage.module.scss'
 
 type Props = {
 	post: Post
@@ -21,7 +23,9 @@ const PostPage: React.FC<Props> = props => {
 				subtitle={props.post.frontmatter.description}
 			/>
 
-			<main></main>
+			<div className={styles.markdown}>
+				<ReactMarkdown>{props.post.markdown}</ReactMarkdown>
+			</div>
 		</div>
 	)
 }

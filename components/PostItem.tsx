@@ -20,7 +20,7 @@ const PostItem: React.FC<Props> = props => {
 							<span> &#8226; </span>
 							<span>{readingTime(props.post)} min read</span>
 						</div>
-						<h3>{props.post.frontmatter.title}</h3>
+						<h2>{props.post.frontmatter.title}</h2>
 						<p>{props.post.frontmatter.description}</p>
 						<div className={styles.post_item_footer}>
 							{props.post.frontmatter.tags

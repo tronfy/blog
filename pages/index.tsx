@@ -6,6 +6,7 @@ import Head from '../components/Head'
 import Header from '../components/Header'
 import PostList from '../components/PostList'
 import { getAllPosts } from '../scripts/getAllPosts'
+import styles from '../styles/Home.module.scss'
 
 type Props = {
 	posts: Post[]
@@ -17,11 +18,11 @@ const Home: React.FC<Props> = props => {
 			<Head title="Home" />
 
 			<Header
-				title="hi, i'm nícolas!"
-				subtitle="and this is where I write about any interesting projects of mine"
+				title="Hi, I'm Nícolas!"
+				subtitle="And this is where I write about any interesting projects of mine."
 			/>
 
-			<main>
+			<main className={styles.home}>
 				<PostList posts={props.posts} />
 			</main>
 		</div>

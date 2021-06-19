@@ -1,0 +1,32 @@
+@import "./theme/theme";
+
+.markdown {
+	p {
+		margin: 1em 0;
+	}
+
+	h2, h3, h4, h5 {
+		margin-top: 1em;
+	}
+
+	ul, ol {
+		padding-left: 2em;
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
+
+	ul {
+		li {
+			list-style: none;
+		}
+
+		li:before {
+			content: "# ";
+			margin-left: -1em;
+		}
+	}
+
+	li::before, li::marker {
+		color: $primary;
+	}
+}
