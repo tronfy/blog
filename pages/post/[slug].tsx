@@ -5,6 +5,7 @@ import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import Head from '../../components/Head'
+import Header from '../../components/Header'
 
 type Props = {
 	post: Post
@@ -12,8 +13,13 @@ type Props = {
 
 const PostPage: React.FC<Props> = props => {
 	return (
-		<div>
+		<div className="container">
 			<Head title={props.post.frontmatter.title} />
+
+			<Header
+				title={props.post.frontmatter.title}
+				subtitle={props.post.frontmatter.description}
+			/>
 
 			<main></main>
 		</div>

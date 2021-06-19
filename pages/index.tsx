@@ -16,7 +16,10 @@ const Home: React.FC<Props> = props => {
 		<div className="container">
 			<Head title="Home" />
 
-			<Header />
+			<Header
+				title="hi, i'm nícolas!"
+				subtitle="and this is where I write about any interesting projects of mine"
+			/>
 
 			<main>
 				<PostList posts={props.posts} />

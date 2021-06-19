@@ -2,13 +2,16 @@ import React from 'react'
 
 import styles from '../styles/Header.module.scss'
 
-const Header: React.FC = () => {
+type Props = {
+	title: string
+	subtitle: string
+}
+
+const Header: React.FC<Props> = props => {
 	return (
 		<header className={styles.header}>
-			<h1>hi, i&apos;m nícolas!</h1>
-			<p>
-				and this is where I write about any interesting projects of mine
-			</p>
+			<h1>{props.title}</h1>
+			<p>{props.subtitle}</p>
 		</header>
 	)
 }
