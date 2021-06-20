@@ -9,11 +9,11 @@ import {
 	SpecialComponents,
 } from 'react-markdown/src/ast-to-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { nord as theme } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import Head from '../../components/Head'
 import Header from '../../components/Header'
 import styles from '../../styles/PostPage.module.scss'
+import prismTheme from '../../styles/prism-custom'
 
 type Props = {
 	post: Post
@@ -25,7 +25,7 @@ const PostPage: React.FC<Props> = props => {
 			const match = /language-(\w+)/.exec(className || '')
 			return !inline && match ? (
 				<SyntaxHighlighter
-					style={theme}
+					style={prismTheme}
 					language={match[1]}
 					PreTag="div"
 					{...props}
@@ -48,7 +48,7 @@ const PostPage: React.FC<Props> = props => {
 			/>
 
 			<div className={styles.markdown}>
-				<ReactMarkdown components={components} className="markdown">
+				<ReactMarkdown components={components}>
 					{props.post.markdown}
 				</ReactMarkdown>
 			</div>

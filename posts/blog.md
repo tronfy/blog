@@ -16,6 +16,7 @@ tags: ['blog', 'next.js', 'markdown', 'web', 'typescript']
 Donec hendrerit felis at libero pretium auctor. Fusce malesuada elementum libero, vitae vehicula dui congue at.
 
 ```tsx
+// index.d.ts
 declare global {
 	type Frontmatter = {
 		title: string
