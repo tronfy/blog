@@ -5,7 +5,7 @@
 		margin: 1em 0;
 	}
 
-	h2, h3, h4, h5 {
+	h2, h3, h4, h5, h6 {
 		margin-top: 1em;
 	}
 
@@ -28,5 +28,11 @@
 
 	li::before, li::marker {
 		color: $primary;
+	}
+
+	blockquote {
+		border-left: .4rem solid $foreground;
+		background: $foreground-dark;
+		padding: 1px 0 1px 1em;
 	}
 }
