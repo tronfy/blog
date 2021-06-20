@@ -41,6 +41,8 @@ export {}
 
 Aenean tempor suscipit sapien et condimentum. Aliquam porta porttitor ullamcorper. **Etiam at suscipit arcu.** Fusce nec dictum felis. Ut accumsan nisl nec ex volutpat luctus.
 
+![Cat](/cat.jpg)
+
 ## Lorem Ipsum
 
 Integer aliquam eu nunc dignissim tempor. *Aliquam pretium sollicitudin dolor, in rhoncus metus laoreet ac.* Duis vel mi est.
