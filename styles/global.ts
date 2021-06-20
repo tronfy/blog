@@ -5,7 +5,10 @@ const GlobalStyle = createGlobalStyle`
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	//outline: 1px solid magenta;
+
+	scrollbar-width: thin;
+	scrollbar-color: ${props => props.theme.colors.primaryDark} ${props =>
+	props.theme.colors.background};
 }
 
 body {
@@ -68,6 +71,23 @@ strong {
 ::selection {
 	background: ${props => props.theme.colors.secondary};
 	color: ${props => props.theme.colors.background};
+}
+
+::-webkit-scrollbar {
+	width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: ${props => props.theme.colors.background};
+}
+
+::-webkit-scrollbar-thumb {
+	background: ${props => props.theme.colors.primaryDark};
+	border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: ${props => props.theme.colors.primary};
 }
 
 @media (max-width: 1600px) {
