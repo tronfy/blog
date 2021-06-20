@@ -4,6 +4,12 @@ import glob from 'glob'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import ReactMarkdown from 'react-markdown'
+import {
+	NormalComponents,
+	SpecialComponents,
+} from 'react-markdown/src/ast-to-react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { nord as theme } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import Head from '../../components/Head'
 import Header from '../../components/Header'
@@ -14,6 +20,24 @@ type Props = {
 }
 
 const PostPage: React.FC<Props> = props => {
+	const components: Partial<NormalComponents & SpecialComponents> = {
+		code({ inline, className, children, ...props }) {
+			const match = /language-(\w+)/.exec(className || '')
+			return !inline && match ? (
+				<SyntaxHighlighter
+					style={theme}
+					language={match[1]}
+					PreTag="div"
+					{...props}
+				>
+					{String(children).replace(/\n$/, '')}
+				</SyntaxHighlighter>
+			) : (
+				<code className={className} {...props} />
+			)
+		},
+	}
+
 	return (
 		<div className="container">
 			<Head title={props.post.frontmatter.title} />
@@ -24,7 +48,9 @@ const PostPage: React.FC<Props> = props => {
 			/>
 
 			<div className={styles.markdown}>
-				<ReactMarkdown>{props.post.markdown}</ReactMarkdown>
+				<ReactMarkdown components={components} className="markdown">
+					{props.post.markdown}
+				</ReactMarkdown>
 			</div>
 		</div>
 	)

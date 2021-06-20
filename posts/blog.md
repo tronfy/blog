@@ -15,27 +15,28 @@ tags: ['blog', 'next.js', 'markdown', 'web', 'typescript']
 
 Donec hendrerit felis at libero pretium auctor. Fusce malesuada elementum libero, vitae vehicula dui congue at.
 
-		declare global {
-			type Frontmatter = {
-				title: string
-				description: string
-				date: string
-				tags: string[]
-			}
+```tsx
+declare global {
+	type Frontmatter = {
+		title: string
+		description: string
+		date: string
+		tags: string[]
+	}
 
-			type Post = {
-				frontmatter: Frontmatter
-				markdown: string
-				slug: string
-			}
+	type Post = {
+		frontmatter: Frontmatter
+		markdown: string
+		slug: string
+	}
 
-			type PostValue = {
-				default: string
-			}
-		}
+	type PostValue = {
+		default: string
+	}
+}
 
-		export {}
-
+export {}
+```
 
 Aenean tempor suscipit sapien et condimentum. Aliquam porta porttitor ullamcorper. **Etiam at suscipit arcu.** Fusce nec dictum felis. Ut accumsan nisl nec ex volutpat luctus.
 
