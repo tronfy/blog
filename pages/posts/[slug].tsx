@@ -20,6 +20,9 @@ type Props = {
 }
 
 const PostPage: React.FC<Props> = props => {
+	// fixes build crash: in the first run, props are empty
+	if (!props.post) return <></>
+
 	const components: Partial<NormalComponents & SpecialComponents> = {
 		code({ inline, className, children, ...props }) {
 			const match = /language-(\w+)/.exec(className || '')
@@ -82,10 +85,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	)
 
 	// create paths with `slug` param
-	const paths = blogSlugs.map(slug => `/post/${slug}`)
+	const paths = blogSlugs.map(slug => `/posts/${slug}`)
 	return {
 		paths,
-		fallback: false,
+		fallback: true,
 	}
 }
 

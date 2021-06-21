@@ -11,7 +11,7 @@ type Props = {
 
 const PostItem: React.FC<Props> = props => {
 	return (
-		<Link href={{ pathname: `/post/${props.post.slug}` }}>
+		<Link href={{ pathname: `/posts/${props.post.slug}` }}>
 			<a>
 				<li>
 					<div className={styles.post_item}>
