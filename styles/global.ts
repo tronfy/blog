@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import theme from './theme'
+
 const GlobalStyle = createGlobalStyle`
 * {
 	margin: 0;
@@ -7,14 +9,13 @@ const GlobalStyle = createGlobalStyle`
 	box-sizing: border-box;
 
 	scrollbar-width: thin;
-	scrollbar-color: ${props => props.theme.colors.primaryDark} ${props =>
-	props.theme.colors.background};
+	scrollbar-color: ${theme.colors.primaryDark} ${theme.colors.background};
 }
 
 body {
 	display: block;
-	background: ${props => props.theme.colors.background};
-	color: ${props => props.theme.colors.foreground};
+	background: ${theme.colors.background};
+	color: ${theme.colors.foreground};
 
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 14pt;
@@ -43,7 +44,7 @@ h3 {
 }
 
 a {
-	color: ${props => props.theme.colors.primary};
+	color: ${theme.colors.primary};
 	text-decoration: underline 1pt solid;
 	border-radius: .2em;
 
@@ -52,8 +53,8 @@ a {
 }
 
 a:hover {
-	color: ${props => props.theme.colors.background};
-	background: ${props => props.theme.colors.primary};
+	color: ${theme.colors.background};
+	background: ${theme.colors.primary};
 	text-decoration: none;
 
 	transition-duration: .2s;
@@ -65,12 +66,12 @@ ul li {
 }
 
 strong {
-	color: ${props => props.theme.colors.secondary};
+	color: ${theme.colors.secondary};
 }
 
 ::selection {
-	background: ${props => props.theme.colors.secondary};
-	color: ${props => props.theme.colors.background};
+	background: ${theme.colors.secondary};
+	color: ${theme.colors.background};
 }
 
 ::-webkit-scrollbar {
@@ -78,16 +79,16 @@ strong {
 }
 
 ::-webkit-scrollbar-track {
-	background: ${props => props.theme.colors.background};
+	background: ${theme.colors.background};
 }
 
 ::-webkit-scrollbar-thumb {
-	background: ${props => props.theme.colors.primaryDark};
+	background: ${theme.colors.primaryDark};
 	border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: ${props => props.theme.colors.primary};
+	background: ${theme.colors.primary};
 }
 
 @media (max-width: 1600px) {
