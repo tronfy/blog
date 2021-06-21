@@ -36,7 +36,9 @@ const PostPage: React.FC<Props> = props => {
 					{String(children).replace(/\n$/, '')}
 				</SyntaxHighlighter>
 			) : (
-				<code className={className} {...props} />
+				<code className={className} {...props}>
+					{children}
+				</code>
 			)
 		},
 	}

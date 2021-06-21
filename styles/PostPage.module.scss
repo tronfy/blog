@@ -50,7 +50,7 @@
 
 	blockquote {
 		border-left: .4rem solid $foreground;
-		background: $foreground-dark;
+		background: $background-light;
 		border-radius: .3em;
 		padding: .5em 1em .5em 1em;
 		font-size: 12pt;
@@ -64,5 +64,16 @@
 	p img {
 		max-width: 100%;
 		border-radius: .3rem;
+	}
+
+	code {
+		color: $foreground;
+		background: $foreground-dark;
+
+		font-family: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+		font-size: 12pt;
+
+		padding: .1em .4em;
+		border-radius: .4em;
 	}
 }
