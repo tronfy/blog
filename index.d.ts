@@ -11,10 +11,6 @@ declare global {
 		markdown: string
 		slug: string
 	}
-
-	type PostValue = {
-		default: string
-	}
 }
 
 export {}

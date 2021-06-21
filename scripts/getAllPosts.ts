@@ -1,5 +1,9 @@
 import matter from 'gray-matter'
 
+type PostValue = {
+	default: string
+}
+
 export const getAllPosts = (): Post[] => {
 	const context = require.context('../posts', false, /\.md$/)
 	const keys = context.keys()
