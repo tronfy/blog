@@ -1,7 +1,7 @@
 @import "./theme/theme";
 
 .markdown {
-	p {
+	p, blockquote {
 		margin: 1em 0;
 	}
 
@@ -51,11 +51,18 @@
 	blockquote {
 		border-left: .4rem solid $foreground;
 		background: $foreground-dark;
-		padding: 1px 0 1px 1em;
+		border-radius: .3em;
+		padding: .5em 1em .5em 1em;
+		font-size: 12pt;
+
+		* {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 
 	p img {
-		width: 100%;
-		border-radius: .4rem;
+		max-width: 100%;
+		border-radius: .3rem;
 	}
 }

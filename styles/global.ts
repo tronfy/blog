@@ -67,24 +67,6 @@ a {
 	}
 }
 
-/*a {
-	color: ${theme.colors.primary};
-	text-decoration: underline 1pt solid;
-	border-radius: .2em;
-
-	transition-duration: .2s;
-	transition-timing-function: ease-out;
-}
-
-a:hover {
-	color: ${theme.colors.background};
-	background: ${theme.colors.primary};
-	text-decoration: none;
-
-	transition-duration: .2s;
-	transition-timing-function: ease-out;
-}*/
-
 ul li {
 	list-style: none;
 }
