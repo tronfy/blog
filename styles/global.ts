@@ -16,7 +16,7 @@ body {
 	background: ${props => props.theme.colors.background};
 	color: ${props => props.theme.colors.foreground};
 
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Roboto, 'Segoe UI', sans-serif;
 	font-size: 14pt;
 	text-align: justify;
 	text-justify: auto;

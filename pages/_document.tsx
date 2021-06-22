@@ -41,13 +41,23 @@ export default class MyDocument extends Document {
 
 	render(): JSX.Element {
 		return (
-			<Html lang="pt">
+			<Html lang="en">
 				<Head>
-					<meta charSet="utf-8" />
+					<meta
+						httpEquiv="Content-Type"
+						content="text/html;charset=UTF-8"
+					/>
+
+					<link
+						rel="stylesheet"
+						href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+					/>
 				</Head>
 				<body>
 					<div className="container">
 						<Main />
+						<br />
+						<br />
 					</div>
 					<NextScript />
 				</body>
