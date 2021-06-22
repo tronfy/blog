@@ -2,7 +2,6 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { readingTime } from '../scripts/readingTime'
 import styles from '../styles/PostItem.module.scss'
 
 type Props = {
@@ -11,7 +10,12 @@ type Props = {
 
 const PostItem: React.FC<Props> = props => {
 	return (
-		<Link href={{ pathname: `/posts/${props.post.slug}` }}>
+		<Link
+			href={{
+				pathname: `/posts/[slug]`,
+				query: { slug: props.post.slug },
+			}}
+		>
 			<a>
 				<li>
 					<div className={`${styles.post_item} post_item`}>

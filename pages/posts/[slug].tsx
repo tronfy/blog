@@ -3,6 +3,7 @@ import React from 'react'
 import glob from 'glob'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import {
 	NormalComponents,
@@ -37,6 +38,15 @@ const PostPage: React.FC<Props> = props => {
 				<code className={className} {...props}>
 					{children}
 				</code>
+			)
+		},
+		a({ children, ...props }) {
+			const href = props.node.properties.href.toString()
+			if (href.startsWith('http')) return <a href={href}>{children[0]}</a>
+			return (
+				<Link href={href}>
+					<a>{children[0]}</a>
+				</Link>
 			)
 		},
 		h2({ children, ...props }) {
