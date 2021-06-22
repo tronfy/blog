@@ -46,7 +46,9 @@ export default class MyDocument extends Document {
 					<meta charSet="utf-8" />
 				</Head>
 				<body>
-					<Main />
+					<div className="container">
+						<Main />
+					</div>
 					<NextScript />
 				</body>
 			</Html>

@@ -50,9 +50,11 @@ a {
 
 .header {
 	padding: 0 0 3vh 0;
+	text-align: left;
 }
 
 .post_item {
+	text-align: left;
 	padding: 1rem 2em 1rem 0;
 
 	p {
@@ -95,9 +97,9 @@ strong {
 	color: ${props => props.theme.colors.background};
 }
 
-@media (max-width: 820px) {
+@media (max-width: 865px) {
 	.container {
-		width: 95vw;
+		width: 90vw;
 	}
 }
 

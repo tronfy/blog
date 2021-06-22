@@ -87,7 +87,7 @@ const PostPage: React.FC<Props> = props => {
 	}
 
 	return (
-		<div className="container">
+		<>
 			<Head title={props.post.frontmatter.title} />
 
 			<Header
@@ -100,7 +100,7 @@ const PostPage: React.FC<Props> = props => {
 					{props.post.markdown}
 				</ReactMarkdown>
 			</div>
-		</div>
+		</>
 	)
 }
 

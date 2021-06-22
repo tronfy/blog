@@ -13,7 +13,7 @@ type Props = {
 
 const Home: React.FC<Props> = props => {
 	return (
-		<div className="container">
+		<>
 			<Head title="Home" />
 
 			<Header
@@ -21,10 +21,8 @@ const Home: React.FC<Props> = props => {
 				subtitle="And this is where I write about any interesting projects of mine."
 			/>
 
-			<main>
-				<PostList posts={props.posts} />
-			</main>
-		</div>
+			<PostList posts={props.posts} />
+		</>
 	)
 }
 
