@@ -1,6 +1,7 @@
 import matter from 'gray-matter'
 
 import { readingTime } from '../scripts/readingTime'
+import slugify from './slugify'
 
 type PostValue = {
 	default: string
@@ -12,11 +13,7 @@ export const getAllPosts = (): Post[] => {
 	const values: PostValue[] = keys.map(context) as PostValue[]
 
 	const data = keys.map((key, idx): Post => {
-		const slug = key
-			.replace(/^.*[\\/]/, '')
-			.split('.')
-			.slice(0, -1)
-			.join('.')
+		const slug = slugify(key)
 
 		const value = values[idx]
 		const document = matter(value.default)
