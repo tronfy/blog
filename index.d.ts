@@ -10,6 +10,7 @@ declare global {
 		frontmatter: Frontmatter
 		markdown: string
 		slug: string
+		readTime: number
 	}
 }
 

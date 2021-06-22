@@ -18,7 +18,7 @@ const PostItem: React.FC<Props> = props => {
 						<div className="post_item_header">
 							<span>{props.post.frontmatter.date}</span>
 							<span> &#8226; </span>
-							<span>{readingTime(props.post)} min read</span>
+							<span>{props.post.readTime} min read</span>
 						</div>
 						<h2>{props.post.frontmatter.title}</h2>
 						<p>{props.post.frontmatter.description}</p>

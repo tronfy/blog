@@ -1,7 +1,6 @@
-export const readingTime = (post: Post): number => {
-	const txt = post.markdown
+export const readingTime = (text: string): number => {
 	const wpm = 160
-	const words = txt
+	const words = text
 		.replace(/(?:^#+\s|\*|^-)/gm, '')
 		.trim()
 		.split(/\s+/).length

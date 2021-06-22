@@ -1,5 +1,7 @@
 import matter from 'gray-matter'
 
+import { readingTime } from '../scripts/readingTime'
+
 type PostValue = {
 	default: string
 }
@@ -19,10 +21,13 @@ export const getAllPosts = (): Post[] => {
 		const value = values[idx]
 		const document = matter(value.default)
 
+		const readTime = readingTime(value.default)
+
 		return {
 			frontmatter: document.data as Frontmatter,
 			markdown: document.content,
-			slug,
+			slug: slug,
+			readTime: readTime,
 		}
 	})
 
