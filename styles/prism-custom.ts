@@ -38,7 +38,7 @@ const prism = {
 		MozHyphens: 'none',
 		msHyphens: 'none',
 		hyphens: 'none',
-		padding: '1em',
+		padding: '.5em',
 		margin: '.5em 0',
 		overflow: 'auto',
 		borderRadius: '0.3em',

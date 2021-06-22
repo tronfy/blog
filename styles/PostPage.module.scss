@@ -1,8 +1,8 @@
 @import "./theme/theme";
 
 .markdown {
-	p, blockquote {
-		margin: 1em 0;
+	p {
+		margin-bottom: 1em;
 	}
 
 	h2, h3, h4, h5, h6 {
@@ -49,10 +49,11 @@
 	}
 
 	blockquote {
-		border-left: .4rem solid $foreground;
+		border-left: .4rem solid $foreground-dark;
 		background: $background-light;
 		border-radius: .3em;
 		padding: .5em 1em .5em 1em;
+		margin: 1em 0;
 		font-size: 12pt;
 
 		* {
@@ -75,5 +76,10 @@
 
 		padding: .1em .4em;
 		border-radius: .4em;
+	}
+
+	pre {
+		border-left: .4rem solid $primary-dark;
+		border-radius: .3em;
 	}
 }
