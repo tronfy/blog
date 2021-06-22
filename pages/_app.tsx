@@ -8,12 +8,10 @@ import theme from '../styles/theme'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 	return (
-		<>
+		<ThemeProvider theme={theme}>
+			<Component {...pageProps} />
 			<GlobalStyle />
-			<ThemeProvider theme={theme}>
-				<Component {...pageProps} />
-			</ThemeProvider>
-		</>
+		</ThemeProvider>
 	)
 }
 

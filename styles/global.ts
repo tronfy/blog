@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-import theme from './theme'
-
 const GlobalStyle = createGlobalStyle`
 * {
 	margin: 0;
@@ -10,13 +8,14 @@ const GlobalStyle = createGlobalStyle`
 
 	// firefox scrollbar styling
 	scrollbar-width: thin;
-	scrollbar-color: ${theme.colors.primaryDark} ${theme.colors.background};
+	scrollbar-color: ${props => props.theme.colors.primaryDark} ${props =>
+	props.theme.colors.background};
 }
 
 body {
 	display: block;
-	background: ${theme.colors.background};
-	color: ${theme.colors.foreground};
+	background: ${props => props.theme.colors.background};
+	color: ${props => props.theme.colors.foreground};
 
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 14pt;
@@ -34,6 +33,7 @@ body {
 
 h1 {
 	font-size: 28pt;
+	text-shadow: 2px 2px ${props => props.theme.colors.primaryDark};
 }
 
 h2 {
@@ -46,7 +46,7 @@ h3 {
 
 a {
 	text-decoration: none;
-	color: ${theme.colors.foreground};
+	color: ${props => props.theme.colors.foreground};
 }
 
 .header {
@@ -72,7 +72,7 @@ ul li {
 }
 
 strong {
-	color: ${theme.colors.secondary};
+	color: ${props => props.theme.colors.secondary};
 }
 
 
@@ -81,19 +81,19 @@ strong {
 	width: .5rem;
 }
 ::-webkit-scrollbar-track {
-	background: ${theme.colors.background};
+	background: ${props => props.theme.colors.background};
 }
 ::-webkit-scrollbar-thumb {
-	background: ${theme.colors.primaryDark};
+	background: ${props => props.theme.colors.primaryDark};
 	border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: ${theme.colors.primary};
+	background: ${props => props.theme.colors.primary};
 }
 
 ::selection {
-	background: ${theme.colors.secondary};
-	color: ${theme.colors.background};
+	background: ${props => props.theme.colors.secondary};
+	color: ${props => props.theme.colors.background};
 }
 
 @media (max-width: 820px) {
