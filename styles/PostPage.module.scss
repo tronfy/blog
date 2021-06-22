@@ -67,7 +67,7 @@
 		border-radius: .3rem;
 	}
 
-	code {
+	code:not([class*="language-"]){
 		color: $foreground;
 		background: $foreground-dark;
 

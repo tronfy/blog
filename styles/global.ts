@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-	display: block;
 	background: ${props => props.theme.colors.background};
 	color: ${props => props.theme.colors.foreground};
 
@@ -99,6 +98,15 @@ strong {
 @media (max-width: 820px) {
 	.container {
 		width: 95vw;
+	}
+}
+
+/* fix white flash when reloading development builds on firefox
+ * so that mozilla doesn't burn our tired developer eyes
+ */
+@supports (-moz-appearance:none) {
+	body {
+		display: block;
 	}
 }
 `
