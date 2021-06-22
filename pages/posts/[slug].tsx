@@ -12,6 +12,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import Head from '../../components/Head'
 import Header from '../../components/Header'
+import slugify from '../../scripts/slugify'
 import styles from '../../styles/PostPage.module.scss'
 import prismTheme from '../../styles/prism-custom'
 
@@ -36,6 +37,41 @@ const PostPage: React.FC<Props> = props => {
 				<code className={className} {...props}>
 					{children}
 				</code>
+			)
+		},
+		h2({ children, ...props }) {
+			return React.createElement(
+				'h' + props.level,
+				{ id: slugify(children[0] as string) },
+				children[0]
+			)
+		},
+		h3({ children, ...props }) {
+			return React.createElement(
+				'h' + props.level,
+				{ id: slugify(children[0] as string) },
+				children[0]
+			)
+		},
+		h4({ children, ...props }) {
+			return React.createElement(
+				'h' + props.level,
+				{ id: slugify(children[0] as string) },
+				children[0]
+			)
+		},
+		h5({ children, ...props }) {
+			return React.createElement(
+				'h' + props.level,
+				{ id: slugify(children[0] as string) },
+				children[0]
+			)
+		},
+		h6({ children, ...props }) {
+			return React.createElement(
+				'h' + props.level,
+				{ id: slugify(children[0] as string) },
+				children[0]
 			)
 		},
 	}
