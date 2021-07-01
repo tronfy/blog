@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 	// firefox scrollbar styling
 	scrollbar-width: thin;
 	scrollbar-color: ${props => props.theme.colors.primaryDark} ${props =>
-	props.theme.colors.background};
+  props.theme.colors.background};
 }
 
 body {
