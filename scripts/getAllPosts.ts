@@ -7,8 +7,12 @@ type PostValue = {
   default: string
 }
 
-export const getAllPosts = (): Post[] => {
-  const context = require.context('../posts', false, /\.md$/)
+export const getAllPosts = (locale: string, defaultLocale: string): Post[] => {
+  let context
+  if (locale !== defaultLocale)
+    context = require.context(`../posts/pt-BR`, false, /\.md$/)
+  else context = require.context(`../posts`, false, /\.md$/)
+
   const keys = context.keys()
   const values: PostValue[] = keys.map(context) as PostValue[]
 

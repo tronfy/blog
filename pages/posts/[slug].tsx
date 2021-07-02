@@ -105,8 +105,12 @@ const PostPage: React.FC<Props> = props => {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
+  const { locale, defaultLocale } = ctx
   const { slug } = ctx.params
-  const postFile = await import(`../../posts/${slug}.md`)
+
+  const postFile = await import(
+    `../../posts/${locale !== defaultLocale ? `${locale}/` : ''}${slug}.md`
+  )
   const grayMatter = matter(postFile.default)
 
   return {

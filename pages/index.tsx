@@ -26,8 +26,9 @@ const Home: React.FC<Props> = props => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts()
+export const getStaticProps: GetStaticProps = async ctx => {
+  const { locale, defaultLocale } = ctx
+  const posts = getAllPosts(locale, defaultLocale)
 
   return {
     props: {

@@ -1,6 +1,6 @@
 ---
-title: 'Next.js Markdown Blog'
-description: 'This blog you are looking at right now? Let me tell you how I made it.'
+title: 'Blog Markdown em Next.js'
+description: 'Esse blog que você está vendo agora? Vem ver como fazer um também!'
 date: '2020-03-16'
 tags: ['blog', 'next.js', 'markdown', 'web', 'typescript']
 ---
