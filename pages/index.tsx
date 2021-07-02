@@ -8,19 +8,16 @@ const Home: React.FC = () => {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>🦊💻</title>
+				<title>nds.dev.br</title>
 			</Head>
 
 			<main className={styles.main}>
 				<h1 className={`${styles.title} ${styles.motion_text}`}>
-					<TextBob text="Soon!" maxBob={5} />
+					<TextBob text="Em breve!" maxBob={5} />
 				</h1>
 
 				<h3 className={styles.description}>
-					<a href="https://github.com/nicolasdschmidt">
-						github.com/nicolasdschmidt
-					</a>
-					<p>🦊💻</p>
+					<a href="https://github.com/tronfy">github.com/tronfy</a>
 				</h3>
 			</main>
 		</div>
