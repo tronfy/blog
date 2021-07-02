@@ -8,6 +8,8 @@ type Props = {
 }
 
 const LetterBob: React.FC<Props> = props => {
+	if (props.char === ' ') return <span>&nbsp;</span>
+
 	return (
 		<span>
 			<motion.div
