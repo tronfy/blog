@@ -7,11 +7,11 @@ module.exports = {
     defaultLocale: 'en-US',
     domains: [
       {
-        domain: 'global.nds.dev.br',
+        domain: 'global.preview.nds.dev.br',
         defaultLocale: 'en-US',
       },
       {
-        domain: 'nds.dev.br',
+        domain: 'preview.nds.dev.br',
         defaultLocale: 'pt-BR',
       }
     ],
