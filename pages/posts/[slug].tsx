@@ -109,7 +109,9 @@ export const getStaticProps: GetStaticProps = async ctx => {
   const { slug } = ctx.params
 
   const postFile = await import(
-    `../../posts/${locale !== defaultLocale ? `${locale}/` : ''}${slug}.md`
+    `../../posts/${
+      locale !== defaultLocale ? `${locale.replace('-', '_')}/` : ''
+    }${slug}.md`
   )
   const grayMatter = matter(postFile.default)
 
@@ -125,15 +127,12 @@ export const getStaticProps: GetStaticProps = async ctx => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // get all .md files in the posts dir
-  const blogs = glob.sync('posts/**/*.md')
+  const blogs = glob.sync(`posts/**/*.md`)
 
-  // remove path and extension to leave filename only
   const blogSlugs = blogs.map(file =>
-    file.split('/')[1].replace(/ /g, '-').slice(0, -3).trim()
+    file.split('/').pop().replace(/ /g, '-').slice(0, -3).trim()
   )
 
-  // create paths with `slug` param
   const paths = blogSlugs.map(slug => `/posts/${slug}`)
   return {
     paths,

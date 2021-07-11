@@ -10,7 +10,7 @@ type PostValue = {
 export const getAllPosts = (locale: string, defaultLocale: string): Post[] => {
   let context
   if (locale !== defaultLocale)
-    context = require.context(`../posts/pt-BR`, false, /\.md$/)
+    context = require.context(`../posts/pt_BR`, false, /\.md$/)
   else context = require.context(`../posts`, false, /\.md$/)
 
   const keys = context.keys()

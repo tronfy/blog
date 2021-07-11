@@ -6,7 +6,7 @@
 	"author": {
 		"name": "Nícolas D. Schmidt",
 		"email": "nicolasdschmidt@protonmail.com",
-		"url": "https://github.com/nicolasdschmidt"
+		"url": "https://github.com/tronfy"
 	},
 	"keywords": [
 		"nextjs",
@@ -15,7 +15,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nicolasdschmidt/blog"
+		"url": "https://github.com/tronfy/blog"
 	},
 	"scripts": {
 		"dev": "next dev",
