@@ -9,7 +9,11 @@ type Props = {
 const Head: React.FC<Props> = props => {
   return (
     <NextHead>
-      <title>{props.title}</title>
+      <title>nds | {props.title}</title>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      />
     </NextHead>
   )
 }

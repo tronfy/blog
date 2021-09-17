@@ -3,15 +3,15 @@ import React from 'react'
 import PostItem from './PostItem'
 
 type Props = {
-  posts: Post[]
+  metas: PostMeta[]
 }
 
 const PostList: React.FC<Props> = props => {
   return (
     <section>
       <ul>
-        {props.posts.map(post => (
-          <PostItem post={post} key={post.slug} />
+        {props.metas.map(meta => (
+          <PostItem meta={meta} key={meta.slug} />
         ))}
       </ul>
     </section>

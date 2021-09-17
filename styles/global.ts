@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-	font-size: 28pt;
+	font-size: 30pt;
 	text-shadow: 2px 2px ${props => props.theme.colors.primaryDark};
 }
 

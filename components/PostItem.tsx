@@ -5,7 +5,7 @@ import Link from 'next/link'
 import styles from '../styles/PostItem.module.scss'
 
 type Props = {
-  post: Post
+  meta: PostMeta
 }
 
 const PostItem: React.FC<Props> = props => {
@@ -13,24 +13,24 @@ const PostItem: React.FC<Props> = props => {
     <Link
       href={{
         pathname: `/posts/[slug]`,
-        query: { slug: props.post.slug },
+        query: { slug: props.meta.slug },
       }}
     >
       <a>
         <li>
           <div className={`${styles.post_item} post_item`}>
             <div className="post_item_header">
-              <span>{props.post.frontmatter.date}</span>
+              <span>{props.meta.frontmatter.date}</span>
               <span> &#8226; </span>
-              <span>{props.post.readTime} min read</span>
+              <span>{props.meta.readTime} min read</span>
             </div>
-            <h2>{props.post.frontmatter.title}</h2>
-            <p>{props.post.frontmatter.description}</p>
+            <h2>{props.meta.frontmatter.title}</h2>
+            <p>{props.meta.frontmatter.description}</p>
             <div className="post_item_footer">
-              {props.post.frontmatter.tags.sort().map((tag, idx) => (
+              {props.meta.frontmatter.tags.sort().map((tag, idx) => (
                 <span key={idx}>
                   <span>{tag}</span>
-                  {idx < props.post.frontmatter.tags.length - 1 ? (
+                  {idx < props.meta.frontmatter.tags.length - 1 ? (
                     <span> &#8226; </span>
                   ) : (
                     ''

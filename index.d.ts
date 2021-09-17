@@ -1,16 +1,20 @@
 declare global {
-  type Frontmatter = {
+  interface Frontmatter {
     title: string
     description: string
     date: string
     tags: string[]
   }
 
-  type Post = {
+  interface PostMeta {
     frontmatter: Frontmatter
-    markdown: string
     slug: string
     readTime: number
+  }
+
+  interface Post {
+    meta: PostMeta
+    body: string
   }
 }
 
