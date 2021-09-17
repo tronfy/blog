@@ -12,7 +12,7 @@ const PostItem: React.FC<Props> = props => {
   return (
     <Link
       href={{
-        pathname: `/posts/[slug]`,
+        pathname: `/blog/[slug]`,
         query: { slug: props.meta.slug },
       }}
     >

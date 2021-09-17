@@ -2,10 +2,10 @@ import React from 'react'
 
 import { GetStaticProps } from 'next'
 
-import Head from '../components/Head'
-import Header from '../components/Header'
-import PostList from '../components/PostList'
-import { getAllPostMetas } from '../scripts/getPosts'
+import Head from '../../components/Head'
+import Header from '../../components/Header'
+import PostList from '../../components/PostList'
+import { getAllPostMetas } from '../../scripts/getPosts'
 
 type Props = {
   metas: PostMeta[]
