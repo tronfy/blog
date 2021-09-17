@@ -23,16 +23,14 @@ type Props = {
 
 const PostPage: React.FC<Props> = props => {
   const post = getPost(props.slug)
-  const components: Partial<NormalComponents & SpecialComponents> = {
+  const components: Partial<
+    Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents
+  > = {
     code({ inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || '')
+
       return !inline && match ? (
-        <SyntaxHighlighter
-          style={prismTheme}
-          language={match[1]}
-          PreTag="div"
-          {...props}
-        >
+        <SyntaxHighlighter style={prismTheme} language={match[1]} PreTag="div">
           {String(children).replace(/\n$/, '')}
         </SyntaxHighlighter>
       ) : (
