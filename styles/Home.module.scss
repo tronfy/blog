@@ -1,0 +1,43 @@
+@import './theme/theme';
+
+.center {
+  text-align: center;
+  margin-top: 290px;
+
+  h1 {
+    font-size: 140pt;
+    text-shadow: 5px 5px $primary-dark, 10px 10px $secondary-dark;
+    transition: transform ease-out 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    span {
+      color: $secondary;
+    }
+  }
+}
+
+.menu {
+  list-style: none;
+
+  li {
+    display: inline;
+    &:before {
+      content: '•';
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    &:first-child:before {
+      content: '';
+      padding: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

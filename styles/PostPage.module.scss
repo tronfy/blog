@@ -1,85 +1,74 @@
-@import "./theme/theme";
+@import './theme/theme';
 
 .markdown {
-	p {
-		margin-bottom: 1em;
-	}
+  p {
+    margin-bottom: 1em;
+  }
 
-	h2, h3, h4, h5, h6 {
-		margin-top: 1em;
-	}
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
+  }
 
-	ul, ol {
-		padding-left: 2em;
-		margin-left: 1em;
-		margin-bottom: 1em;
-	}
+  ul,
+  ol {
+    padding-left: 2em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
 
-	a {
-		color: $primary;
-		text-decoration: underline 1pt solid;
-		border-radius: .2em;
+  ul {
+    li {
+      list-style: none;
+    }
 
-		transition-duration: .2s;
-		transition-timing-function: ease-out;
-	}
+    li:before {
+      content: '# ';
+      margin-left: -1em;
+    }
+  }
 
-	a:hover {
-		color: $background;
-		background: $primary;
-		text-decoration: none;
+  li::before,
+  li::marker {
+    color: $primary;
+  }
 
-		transition-duration: .2s;
-		transition-timing-function: ease-out;
-	}
+  blockquote {
+    border-left: 0.4rem solid $foreground-dark;
+    background: $background-light;
+    border-radius: 0.3em;
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 1em 0;
+    font-size: 12pt;
 
-	ul {
-		li {
-			list-style: none;
-		}
+    * {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 
-		li:before {
-			content: "# ";
-			margin-left: -1em;
-		}
-	}
+  p img {
+    max-width: 100%;
+    border-radius: 0.3rem;
+  }
 
-	li::before, li::marker {
-		color: $primary;
-	}
+  code:not([class*='language-']) {
+    color: $foreground;
+    background: $foreground-dark;
 
-	blockquote {
-		border-left: .4rem solid $foreground-dark;
-		background: $background-light;
-		border-radius: .3em;
-		padding: .5em 1em .5em 1em;
-		margin: 1em 0;
-		font-size: 12pt;
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+      monospace;
+    font-size: 12pt;
 
-		* {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
+    padding: 0.1em 0.4em;
+    border-radius: 0.4em;
+  }
 
-	p img {
-		max-width: 100%;
-		border-radius: .3rem;
-	}
-
-	code:not([class*="language-"]){
-		color: $foreground;
-		background: $foreground-dark;
-
-		font-family: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-		font-size: 12pt;
-
-		padding: .1em .4em;
-		border-radius: .4em;
-	}
-
-	pre {
-		border-left: .4rem solid $primary-dark;
-		border-radius: .3em;
-	}
+  pre {
+    border-left: 0.4rem solid $primary-dark;
+    border-radius: 0.3em;
+  }
 }

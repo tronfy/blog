@@ -44,8 +44,21 @@ h3 {
 }
 
 a {
-	text-decoration: none;
-	color: ${props => props.theme.colors.foreground};
+  color: ${props => props.theme.colors.primary};
+  text-decoration: underline 1pt solid;
+  border-radius: .2em;
+  padding-left: .2em;
+  padding-right: .2em;
+
+  transition: all ease-out .2s;
+
+	&:hover {
+		color: ${props => props.theme.colors.background};
+		background: ${props => props.theme.colors.primary};
+		text-decoration: none;
+
+    transition: all ease-out .2s;
+  }
 }
 
 .header {
@@ -76,6 +89,14 @@ strong {
 	color: ${props => props.theme.colors.secondary};
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 // scrollbar styling (non-firefox)
 ::-webkit-scrollbar {
@@ -103,9 +124,7 @@ strong {
 	}
 }
 
-/* fix white flash when reloading development builds on firefox
- * so that mozilla doesn't burn our tired developer eyes
- */
+// fix white flash when reloading development builds on firefox
 @supports (-moz-appearance:none) {
 	body {
 		display: block;

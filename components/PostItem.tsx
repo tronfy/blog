@@ -16,7 +16,7 @@ const PostItem: React.FC<Props> = props => {
         query: { slug: props.meta.slug },
       }}
     >
-      <a>
+      <a className={styles.a}>
         <li>
           <div className={`${styles.post_item} post_item`}>
             <div className="post_item_header">
