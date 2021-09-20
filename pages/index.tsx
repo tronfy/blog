@@ -12,9 +12,18 @@ const Home: React.FC = () => {
 
       <div className={styles.center}>
         <h1 className="noselect">
-          <span>n</span>
-          <span>d</span>
-          <span>s</span>
+          <input type="checkbox" id="n" />
+          <label htmlFor="n">
+            <span>n</span>
+          </label>
+          <input type="checkbox" id="d" />
+          <label htmlFor="d">
+            <span>d</span>
+          </label>
+          <input type="checkbox" id="s" />
+          <label htmlFor="s">
+            <span>s</span>
+          </label>
         </h1>
         <div>
           <ul className={`${styles.menu} noselect`}>

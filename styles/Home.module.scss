@@ -8,11 +8,19 @@
     font-size: 140pt;
     text-shadow: 5px 5px $primary, 10px 10px $secondary;
 
+    input {
+      display: none;
+    }
+
+    input:checked + label > span {
+      text-shadow: 5px 5px $secondary, 10px 10px $primary;
+    }
+
     span {
       position: relative;
       z-index: 0;
       display: inline-block;
-      transition: transform ease-out 0.3s, transform ease-out 0.3s;
+      transition: transform ease-out 0.3s, z-index ease-out 0.3s;
 
       &:hover {
         z-index: 1;
