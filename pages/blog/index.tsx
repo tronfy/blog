@@ -17,8 +17,8 @@ const Blog: React.FC<Props> = props => {
       <Head title="blog" />
 
       <Header
-        title="Hi, I'm Nícolas!"
-        subtitle="And this is where I write about any interesting projects of mine."
+        title="Oi, sou Nícolas!"
+        subtitle="Aqui é onde escrevo sobre projetos interessantes que faço."
       />
 
       <PostList metas={props.metas} />

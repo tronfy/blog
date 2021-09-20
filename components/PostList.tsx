@@ -7,13 +7,15 @@ type Props = {
 }
 
 const PostList: React.FC<Props> = props => {
+  let render
+
+  if (props.metas.length > 0) {
+    render = props.metas.map(meta => <PostItem meta={meta} key={meta.slug} />)
+  } else render = <p>Hmm, parece que não tem nada aqui.</p>
+
   return (
     <section>
-      <ul>
-        {props.metas.map(meta => (
-          <PostItem meta={meta} key={meta.slug} />
-        ))}
-      </ul>
+      <ul>{render}</ul>
     </section>
   )
 }

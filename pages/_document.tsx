@@ -53,6 +53,17 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=optional"
           />
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          />
+
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="//use.fontawesome.com/releases/v5.7.2/css/all.css"
+          />
         </Head>
         <body>
           <div className="container">

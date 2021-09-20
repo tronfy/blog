@@ -16,13 +16,13 @@ const PostItem: React.FC<Props> = props => {
         query: { slug: props.meta.slug },
       }}
     >
-      <a className={styles.a}>
+      <a className={`${styles.a} nostyle`}>
         <li>
           <div className={`${styles.post_item} post_item`}>
             <div className="post_item_header">
               <span>{props.meta.frontmatter.date}</span>
               <span> &#8226; </span>
-              <span>{props.meta.readTime} min read</span>
+              <span>leitura de {props.meta.readTime}min</span>
             </div>
             <h2>{props.meta.frontmatter.title}</h2>
             <p>{props.meta.frontmatter.description}</p>

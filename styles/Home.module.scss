@@ -7,10 +7,17 @@
   h1 {
     font-size: 140pt;
     text-shadow: 5px 5px $primary-dark, 10px 10px $secondary-dark;
-    transition: transform ease-out 0.3s;
 
-    &:hover {
-      transform: scale(1.1);
+    span {
+      position: relative;
+      z-index: 0;
+      display: inline-block;
+      transition: transform ease-out 0.3s, transform ease-out 0.3s;
+
+      &:hover {
+        z-index: 1;
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -22,6 +29,8 @@
 }
 
 .menu {
+  position: relative;
+  z-index: 2;
   list-style: none;
 
   li {

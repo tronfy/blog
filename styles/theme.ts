@@ -3,6 +3,7 @@ const theme = {
     background: '#131313',
     backgroundLight: '#222222',
     foreground: '#ddd',
+    foregroundDim: '#777',
     foregroundDark: '#555',
     foregroundLight: '#fff',
     primary: '#e621af',
