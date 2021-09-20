@@ -6,7 +6,7 @@ import styles from '../styles/About.module.scss'
 const About: React.FC = () => {
   return (
     <>
-      <Head title="home" />
+      <Head title="about" />
 
       <div className={styles.content}>
         <div className={styles.title}>
