@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         <div>
           <ul className={`${styles.menu} noselect`}>
             <li>
-              <Link href="blog">
+              <Link href="/blog">
                 <a>blog</a>
               </Link>
             </li>
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
               <a href="https://www.linkedin.com/in/nicolasdschmidt">linkedin</a>
             </li>
             <li>
-              <Link href="about">
+              <Link href="/about">
                 <a>about</a>
               </Link>
             </li>

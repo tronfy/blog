@@ -1,6 +1,10 @@
 import React from 'react'
 
+import Image from 'next/image'
+import Link from 'next/link'
+
 import Head from '../components/Head'
+import logo from '../public/logo.png'
 import styles from '../styles/About.module.scss'
 
 const About: React.FC = () => {
@@ -11,7 +15,16 @@ const About: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.title}>
           <div className={styles.group}>
-            <h1>nds</h1>
+            <h1>
+              <Image
+                src={logo}
+                alt="nds logo"
+                width={40}
+                height={40}
+                draggable="false"
+              />
+              nds
+            </h1>
             <p className={styles.float}>
               <span>aka </span>
               nicolasdschmidt
@@ -42,19 +55,27 @@ const About: React.FC = () => {
         <div className={styles.links}>
           <ul>
             <li>
-              <a href="https://github.com/tronfy">
-                <i className="fab fa-github" /> tronfy
-              </a>
-            </li>
-            <li>
               <a href="https://www.linkedin.com/in/nicolasdschmidt">
-                <i className="fab fa-linkedin" /> nicolasdschmidt
+                <span className={styles.dim}>linkedin.com/in/</span>
+                nicolasdschmidt
               </a>
             </li>
             <li>
               <a href="mailto:nicolasdschmidt@pm.me">
-                <i className="far fa-envelope" /> nicolasdschmidt@pm.me
+                nicolasdschmidt<span className={styles.dim}>@pm.me</span>
               </a>
+            </li>
+            <li>
+              <a href="https://github.com/tronfy">
+                <span className={styles.dim}>github.com/</span>tronfy
+              </a>
+            </li>
+            <li>
+              <Link href="/">
+                <a>
+                  nds<span className={styles.dim}>.dev.br</span>
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

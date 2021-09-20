@@ -6,15 +6,18 @@ const theme = {
     foregroundDim: '#777',
     foregroundDark: '#555',
     foregroundLight: '#fff',
-    primary: '#e621af',
-    primaryLight: '#df6cbe',
-    primaryDark: '#a7097a',
-    secondary: '#09e4e6',
-    secondaryLight: '#79e0e2',
-    secondaryDark: '#05a6a8',
-    tertiary: '#F0CA00',
-    tertiaryLight: '#eed85e',
-    tertiaryDark: '#af9500',
+
+    primary: '#ed0e96',
+    primaryLight: '#e84ca8',
+    primaryDark: '#c70466',
+
+    secondary: '#16dadd',
+    secondaryLight: '#96d4d7',
+    secondaryDark: '#0d8b8e',
+
+    tertiary: '#f4b800',
+    tertiaryLight: '#f3ca3f',
+    tertiaryDark: '#c37800',
   },
 }
 
