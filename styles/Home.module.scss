@@ -1,38 +1,60 @@
-.container {
-	min-height: 100vh;
-	padding: 0 0.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+@import './theme/theme';
+
+.center {
+  text-align: center;
+  margin-top: 25vh;
+
+  h1 {
+    font-size: 140pt;
+    text-shadow: 5px 5px $primary, 10px 10px $secondary;
+
+    input {
+      display: none;
+    }
+
+    input:checked + label > span {
+      text-shadow: 5px 5px $secondary, 10px 10px $primary;
+    }
+
+    span {
+      position: relative;
+      z-index: 0;
+      display: inline-block;
+      transition: transform ease-out 0.3s, z-index ease-out 0.3s;
+
+      &:hover {
+        z-index: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  p {
+    span {
+      color: $secondary;
+    }
+  }
 }
 
-.main {
-	padding: 5rem 0;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+.menu {
+  position: relative;
+  z-index: 2;
+  list-style: none;
 
-.title {
-	margin: 0;
-	line-height: 1.15;
-	font-size: 4rem;
-}
+  li {
+    display: inline;
+    &:before {
+      content: '•';
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    &:first-child:before {
+      content: '';
+      padding: 0;
+    }
+  }
 
-.motion_text span {
-	float: left;
-}
-
-.title,
-.description {
-	text-align: center;
-}
-
-.description {
-	line-height: 1.5;
-	font-size: 1.5rem;
+  a {
+    text-decoration: none;
+  }
 }

@@ -1,0 +1,21 @@
+@import './theme/theme';
+
+.post_item {
+  transform: translateX(0);
+  transition: transform ease-out 0.3s;
+
+  :hover > & {
+    transform: translateX(1em);
+  }
+}
+
+.a {
+  text-decoration: none;
+  color: $foreground;
+  background: none;
+  padding: 0;
+
+  &:hover {
+    color: $foreground;
+  }
+}

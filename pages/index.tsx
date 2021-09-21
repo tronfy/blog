@@ -1,27 +1,58 @@
 import React from 'react'
-import Head from 'next/head'
 
+import Link from 'next/link'
+
+import Head from '../components/Head'
 import styles from '../styles/Home.module.scss'
-import TextBob from '../components/TextBob'
 
 const Home: React.FC = () => {
-	return (
-		<div className={styles.container}>
-			<Head>
-				<title>nds.dev.br</title>
-			</Head>
+  return (
+    <>
+      <Head title="home" />
 
-			<main className={styles.main}>
-				<h1 className={`${styles.title} ${styles.motion_text}`}>
-					<TextBob text="Em breve!" maxBob={5} />
-				</h1>
-
-				<h3 className={styles.description}>
-					<a href="https://github.com/tronfy">github.com/tronfy</a>
-				</h3>
-			</main>
-		</div>
-	)
+      <div className={styles.center}>
+        <h1 className="noselect">
+          <input type="checkbox" id="n" />
+          <label htmlFor="n">
+            <span>n</span>
+          </label>
+          <input type="checkbox" id="d" />
+          <label htmlFor="d">
+            <span>d</span>
+          </label>
+          <input type="checkbox" id="s" />
+          <label htmlFor="s">
+            <span>s</span>
+          </label>
+        </h1>
+        <div>
+          <ul className={`${styles.menu} noselect`}>
+            <li>
+              <Link href="/blog">
+                <a>blog</a>
+              </Link>
+            </li>
+            <li>
+              <a href="https://github.com/tronfy">github</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/nicolasdschmidt">linkedin</a>
+            </li>
+            <li>
+              <Link href="/about">
+                <a>sobre</a>
+              </Link>
+            </li>
+          </ul>
+          <p>
+            nicolasdschmidt
+            <span>@</span>
+            pm.me
+          </p>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default Home

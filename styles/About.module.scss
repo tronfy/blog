@@ -1,0 +1,39 @@
+@import './theme/theme';
+
+.content {
+  margin-top: 22vh;
+}
+
+.title {
+  padding-bottom: 12vh;
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0.6em;
+  }
+}
+
+.group {
+  display: flex;
+
+  .float {
+    font-size: 16pt;
+    align-self: flex-end;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+
+    span {
+      color: $foreground-dim;
+    }
+  }
+}
+
+.links {
+  padding-top: 12vh;
+}
+
+.dim {
+  font-family: 'Roboto Light';
+}
