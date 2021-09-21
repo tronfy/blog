@@ -17,6 +17,7 @@ const readingTime = (text: string): number => {
 }
 
 export const getAllPostMetas = (): PostMeta[] => {
+  // fails when there are no posts
   const context = require.context('../posts', false, /\.md$/)
   const keys = context.keys()
   const values: PostValue[] = keys.map(context) as PostValue[]

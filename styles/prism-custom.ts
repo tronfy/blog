@@ -62,68 +62,68 @@ const prism = {
     color: theme.colors.foregroundDark,
   },
   punctuation: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   '.namespace': {
     Opacity: '.7',
   },
   property: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   tag: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   constant: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   symbol: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   deleted: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   number: {
     color: theme.colors.primaryDark,
   },
   boolean: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   selector: {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   'attr-name': {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   string: {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   char: {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   builtin: {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   inserted: {
-    color: theme.colors.primaryLight,
+    color: theme.colors.primary,
   },
   operator: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   entity: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
     cursor: 'help',
   },
   url: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   '.language-css .token.string': {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   '.style .token.string': {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   variable: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   atrule: {
     color: theme.colors.secondaryLight,
@@ -138,7 +138,7 @@ const prism = {
     color: theme.colors.secondaryLight,
   },
   keyword: {
-    color: theme.colors.secondaryDark,
+    color: theme.colors.secondary,
   },
   regex: {
     color: theme.colors.tertiaryLight,

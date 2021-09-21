@@ -40,7 +40,7 @@ const Home: React.FC = () => {
             </li>
             <li>
               <Link href="/about">
-                <a>about</a>
+                <a>sobre</a>
               </Link>
             </li>
           </ul>

@@ -6,8 +6,6 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
-
   // firefox scrollbar styling
   scrollbar-width: thin;
   scrollbar-color: ${props => props.theme.colors.primaryDark} ${props =>
@@ -38,11 +36,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 24pt;
+    font-size: 20pt;
   }
 
   h3 {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 
   a:not(.nostyle){
@@ -52,14 +50,12 @@ const GlobalStyle = createGlobalStyle`
     padding-left: .2em;
     padding-right: .2em;
 
-    transition: all ease-out .2s;
+    transition: color ease-out .2s, background ease-out .2s;
 
     &:hover {
       color: ${props => props.theme.colors.background};
       background: ${props => props.theme.colors.primary};
       text-decoration: none;
-
-      transition: all ease-out .2s;
     }
   }
 
@@ -83,12 +79,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .text {
-    text-indent: 1em;
-  }
-
   button {
-    background-color: ${props => props.theme.colors.background};
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.primary};
     border: 1px solid ${props => props.theme.colors.primary};
 
@@ -101,10 +94,10 @@ const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
     cursor: pointer;
 
-    transition: all ease-out .2s;
+    transition: color ease-out .2s, background ease-out .2s;
 
     &:hover {
-      background-color: ${props => props.theme.colors.primary};
+      background: ${props => props.theme.colors.primary};
       color: ${props => props.theme.colors.background};
     }
   }
