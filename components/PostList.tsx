@@ -11,7 +11,7 @@ const PostList: React.FC<Props> = props => {
 
   if (props.metas.length > 0) {
     render = props.metas.map(meta => <PostItem meta={meta} key={meta.slug} />)
-  } else render = <p>Hmm, parece que não tem nada aqui.</p>
+  } else render = <p>Hmm, parece que ainda não tem nada aqui.</p>
 
   return (
     <section>
