@@ -67,7 +67,7 @@ const About: React.FC = () => {
         <strong>C++</strong> e eletrônica.
       </p>
       <p className="text">
-        Já na área de frontend, tenho costume de usar <strong>React</strong> em
+        Já na área de front-end, tenho costume de usar <strong>React</strong> em
         servidores <strong>Node.js</strong> ou <strong>Next.js</strong>, e
         domínio de conceitos básicos de design, UI e UX.
       </p>
