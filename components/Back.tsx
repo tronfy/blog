@@ -7,19 +7,24 @@ import styles from '../styles/Back.module.scss'
 
 const Back: React.FC = () => {
   const { asPath } = useRouter()
-  let displayUrl = asPath.split('/').slice(0, -1).join('/')
-  if (!displayUrl) displayUrl = '/'
+  let backUrl = asPath
+    .split('#')[0]
+    .split('?')[0]
+    .split('/')
+    .slice(0, -1)
+    .join('/')
+  if (!backUrl) backUrl = '/'
 
   if (asPath !== '/')
     return (
-      <Link href={asPath + '/..'}>
+      <Link href={backUrl}>
         <a className={styles.back}>
           <span className="material-icons">arrow_back_ios</span>
-          voltar para {displayUrl}
+          voltar para {backUrl}
         </a>
       </Link>
     )
-  else return <> </>
+  else return <></>
 }
 
 export default Back
