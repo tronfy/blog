@@ -10,6 +10,8 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
+import Back from '../components/Back'
+
 export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
@@ -62,8 +64,6 @@ export default class MyDocument extends Document {
         <body>
           <div className="container">
             <Main />
-            <br />
-            <br />
           </div>
           <NextScript />
         </body>
