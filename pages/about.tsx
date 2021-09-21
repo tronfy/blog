@@ -18,7 +18,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <Head title="about" />
+      <Head title="sobre" />
 
       <div className={styles.title}>
         <div className={styles.group}>
