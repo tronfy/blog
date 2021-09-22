@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import logo from '../public/logo-nobg.png'
 import styles from '../styles/Back.module.scss'
 
 const Back: React.FC = () => {
@@ -20,7 +22,11 @@ const Back: React.FC = () => {
       <Link href={backUrl}>
         <a className={styles.back}>
           <span className="material-icons">arrow_back_ios</span>
-          voltar para {backUrl}
+          voltar para{' '}
+          <span className="icon">
+            <Image src={logo} width={15} height={15} alt="nds" />
+          </span>
+          {backUrl}
         </a>
       </Link>
     )

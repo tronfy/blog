@@ -1,10 +1,8 @@
 import React from 'react'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 import Head from '../components/Head'
-import logo from '../public/logo.png'
 import styles from '../styles/About.module.scss'
 
 const About: React.FC = () => {
@@ -22,16 +20,7 @@ const About: React.FC = () => {
 
       <div className={styles.title}>
         <div className={styles.group}>
-          <h1>
-            <Image
-              src={logo}
-              alt="nds logo"
-              width={40}
-              height={40}
-              draggable="false"
-            />
-            nds
-          </h1>
+          <h1>nds</h1>
           <p className={styles.float}>
             <span>aka </span>
             nicolasdschmidt
