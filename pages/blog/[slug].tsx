@@ -77,7 +77,10 @@ const PostPage: React.FC<Props> = props => {
 
   return (
     <>
-      <Head title={post.meta.frontmatter.title} />
+      <Head
+        title={post.meta.frontmatter.title}
+        description={post.meta.frontmatter.description}
+      />
 
       <Header
         title={post.meta.frontmatter.title}
