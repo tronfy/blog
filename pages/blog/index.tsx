@@ -14,7 +14,10 @@ type Props = {
 const Blog: React.FC<Props> = props => {
   return (
     <>
-      <Head title="blog" />
+      <Head
+        title="blog"
+        description="Aqui é onde escrevo sobre projetos interessantes que faço."
+      />
 
       <Header
         title="Oi, sou Nícolas!"

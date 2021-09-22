@@ -1,8 +1,8 @@
 ---
 title: 'Olá, mundo!'
-description: '3 meses depois, enfim o blog está pronto!'
+description: 'Três meses depois, enfim o blog está pronto!'
 date: '2021-09-21'
-tags: ['blog', 'markdown', 'next.js', 'web']
+tags: ['blog', 'markdown', 'next.js', 'typescript', 'web']
 ---
 
 Depois de mais de 3 meses indo e vindo entre tantos projetos, consegui finalizar esse aqui. O intuito era aprender **Next.js**, mesmo sem ainda saber usar **React**, então meio que acabei me introduzindo às duas frameworks. O projeto está disponível no [GitHub](https://github.com/tronfy/blog).

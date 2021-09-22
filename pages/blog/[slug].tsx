@@ -12,6 +12,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import Head from '../../components/Head'
 import Header from '../../components/Header'
+import MetaData from '../../components/MetaData'
+import MetaTags from '../../components/MetaTags'
 import { getPost } from '../../scripts/getPosts'
 import slugify from '../../scripts/slugify'
 import styles from '../../styles/PostPage.module.scss'
@@ -19,6 +21,14 @@ import prismTheme from '../../styles/prism-custom'
 
 type Props = {
   slug: string
+}
+
+const h = ({ children, ...props }) => {
+  return React.createElement(
+    'h' + props.level,
+    { id: slugify(children[0] as string) },
+    children[0]
+  )
 }
 
 const PostPage: React.FC<Props> = props => {
@@ -49,49 +59,42 @@ const PostPage: React.FC<Props> = props => {
       )
     },
     h2({ children, ...props }) {
-      return React.createElement(
-        'h' + props.level,
-        { id: slugify(children[0] as string) },
-        children[0]
-      )
+      return h({ children, ...props })
     },
     h3({ children, ...props }) {
-      return React.createElement(
-        'h' + props.level,
-        { id: slugify(children[0] as string) },
-        children[0]
-      )
+      return h({ children, ...props })
     },
     h4({ children, ...props }) {
-      return React.createElement(
-        'h' + props.level,
-        { id: slugify(children[0] as string) },
-        children[0]
-      )
+      return h({ children, ...props })
     },
     h5({ children, ...props }) {
-      return React.createElement(
-        'h' + props.level,
-        { id: slugify(children[0] as string) },
-        children[0]
-      )
+      return h({ children, ...props })
     },
     h6({ children, ...props }) {
-      return React.createElement(
-        'h' + props.level,
-        { id: slugify(children[0] as string) },
-        children[0]
-      )
+      return h({ children, ...props })
     },
   }
 
   return (
     <>
-      <Head title={post.meta.frontmatter.title} />
+      <Head
+        title={post.meta.frontmatter.title}
+        description={post.meta.frontmatter.description}
+      />
 
       <Header
         title={post.meta.frontmatter.title}
         subtitle={post.meta.frontmatter.description}
+        extra={
+          <>
+            <MetaData
+              date={post.meta.frontmatter.date}
+              readTime={post.meta.readTime}
+            />
+            {' | '}
+            <MetaTags tags={post.meta.frontmatter.tags} />
+          </>
+        }
       />
 
       <div className={styles.markdown}>

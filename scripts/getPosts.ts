@@ -7,7 +7,7 @@ type PostValue = {
 }
 
 const readingTime = (text: string): number => {
-  const wpm = 160
+  const wpm = 200
   const words = text
     .replace(/(?:^#+\s|\*|^-)/gm, '')
     .trim()

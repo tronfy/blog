@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
 * {
   margin: 0;
   padding: 0;
@@ -56,26 +57,6 @@ const GlobalStyle = createGlobalStyle`
       color: ${props => props.theme.colors.background};
       background: ${props => props.theme.colors.primary};
       text-decoration: none;
-    }
-  }
-
-  .header {
-    padding: 0 0 3vh 0;
-    text-align: left;
-  }
-
-  .post_item {
-    text-align: left;
-    padding: 1rem 2em 1rem 0;
-
-    p {
-      opacity: .9;
-    }
-
-    .post_item_header,
-    .post_item_footer {
-      font-size: 10pt;
-      opacity: .6;
     }
   }
 
@@ -147,6 +128,7 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 865px) {
     .container {
       width: 90vw;
+      font-size: 13pt;
     }
   }
 
