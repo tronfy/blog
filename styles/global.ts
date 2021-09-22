@@ -128,6 +128,7 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 865px) {
     .container {
       width: 90vw;
+      font-size: 13pt;
     }
   }
 

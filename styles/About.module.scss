@@ -28,6 +28,15 @@
       color: $foreground-dim;
     }
   }
+
+  @media (max-width: 540px) {
+    display: block;
+
+    .float {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .links {
