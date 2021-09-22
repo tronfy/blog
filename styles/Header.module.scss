@@ -1,0 +1,11 @@
+@import './theme/theme';
+
+.header {
+  padding: 0 0 3vh 0;
+  text-align: left;
+
+  .extra {
+    font-size: 10pt;
+    color: $foreground-dim;
+  }
+}

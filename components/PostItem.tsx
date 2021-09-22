@@ -2,15 +2,15 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import simpleDate from '../scripts/simpleDate'
 import styles from '../styles/PostItem.module.scss'
+import MetaData from './MetaData'
+import MetaTags from './MetaTags'
 
 type Props = {
   meta: PostMeta
 }
 
 const PostItem: React.FC<Props> = props => {
-  const date = simpleDate(new Date(props.meta.frontmatter.date))
   return (
     <Link
       href={{
@@ -20,25 +20,17 @@ const PostItem: React.FC<Props> = props => {
     >
       <a className={`${styles.a} nostyle`}>
         <li>
-          <div className={`${styles.post_item} post_item`}>
-            <div className="post_item_header">
-              <span>{date}</span>
-              <span>{' • '}</span>
-              <span>leitura de {props.meta.readTime}min</span>
+          <div className={styles.post_item}>
+            <div className={styles.info}>
+              <MetaData
+                date={props.meta.frontmatter.date}
+                readTime={props.meta.readTime}
+              />
             </div>
             <h2>{props.meta.frontmatter.title}</h2>
             <p>{props.meta.frontmatter.description}</p>
-            <div className="post_item_footer">
-              {props.meta.frontmatter.tags.sort().map((tag, idx) => (
-                <span key={idx}>
-                  <span>{tag}</span>
-                  {idx < props.meta.frontmatter.tags.length - 1 ? (
-                    <span>{' • '}</span>
-                  ) : (
-                    ''
-                  )}
-                </span>
-              ))}
+            <div className={styles.info}>
+              <MetaTags tags={props.meta.frontmatter.tags} />
             </div>
           </div>
         </li>
