@@ -2,6 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
+import simpleDate from '../scripts/simpleDate'
 import styles from '../styles/PostItem.module.scss'
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 }
 
 const PostItem: React.FC<Props> = props => {
+  const date = simpleDate(new Date(props.meta.frontmatter.date))
   return (
     <Link
       href={{
@@ -20,8 +22,8 @@ const PostItem: React.FC<Props> = props => {
         <li>
           <div className={`${styles.post_item} post_item`}>
             <div className="post_item_header">
-              <span>{props.meta.frontmatter.date}</span>
-              <span> &#8226; </span>
+              <span>{date}</span>
+              <span>{' • '}</span>
               <span>leitura de {props.meta.readTime}min</span>
             </div>
             <h2>{props.meta.frontmatter.title}</h2>
@@ -31,7 +33,7 @@ const PostItem: React.FC<Props> = props => {
                 <span key={idx}>
                   <span>{tag}</span>
                   {idx < props.meta.frontmatter.tags.length - 1 ? (
-                    <span> &#8226; </span>
+                    <span>{' • '}</span>
                   ) : (
                     ''
                   )}
