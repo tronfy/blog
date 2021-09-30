@@ -87,7 +87,7 @@ const About: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/nicolasdschmidt">
+            <a href="https://linkedin.com/in/nicolasdschmidt">
               <span className={styles.dim}>linkedin.com/in/</span>
               nicolasdschmidt
             </a>

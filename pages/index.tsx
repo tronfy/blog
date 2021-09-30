@@ -36,10 +36,10 @@ const Home: React.FC = () => {
               <a href="https://github.com/tronfy">github</a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/nicolasdschmidt">linkedin</a>
+              <a href="https://linkedin.com/in/nicolasdschmidt">linkedin</a>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/sobre">
                 <a>sobre</a>
               </Link>
             </li>
