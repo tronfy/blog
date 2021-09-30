@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node ./.next/server/sitemap.js",
     "start": "next start",
     "lint": "next lint --no-cache",
     "prepare": "husky install"
