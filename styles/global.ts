@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.foreground};
 
     font-family: 'Roboto', 'Segoe UI', sans-serif;
+    font-weight: 400;
     font-size: 14pt;
     text-align: justify;
     text-justify: auto;
