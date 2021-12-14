@@ -42,9 +42,7 @@ const About: React.FC = () => {
       </div>
 
       <p className="text">
-        Sou um <strong>desenvolvedor full-stack com foco em back-end</strong>.
-        Tenho {getAge(new Date('2004-08-13'))} anos e busco por oportunidades de
-        estágio para que possa continuar me desenvolvendo profissionalmente.
+        Tenho {getAge(new Date('2004-08-13'))} anos e sou um <strong>desenvolvedor full-stack com foco em back-end</strong>.
       </p>
       <br />
       <p className="text">
@@ -55,16 +53,11 @@ const About: React.FC = () => {
         também tenho familiaridade com <strong>Arduino</strong>/
         <strong>C++</strong> e eletrônica.
       </p>
+      <br />
       <p className="text">
         Já na área de front-end, tenho costume de usar <strong>React</strong> em
         servidores <strong>Node.js</strong> ou <strong>Next.js</strong>, e
         domínio de conceitos básicos de design, UI e UX.
-      </p>
-      <br />
-      <p className="text">
-        Ultimamente venho dedicando meu tempo livre para aprender{' '}
-        <strong>Rust</strong>, e espero desenvolver alguns projetos pessoais com
-        essa linguagem em breve.
       </p>
 
       <div className={styles.links}>
