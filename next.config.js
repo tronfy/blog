@@ -1,5 +1,8 @@
 module.exports = {
-  webpack5: true,
+  experimental: {
+    styledComponents: true
+  },
+  swcMinify: true,
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.md$/,
