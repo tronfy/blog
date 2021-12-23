@@ -4,10 +4,6 @@ import glob from 'glob'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
-import {
-  NormalComponents,
-  SpecialComponents,
-} from 'react-markdown/src/ast-to-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 import Head from '../../components/Head'
@@ -33,47 +29,6 @@ const h = ({ children, ...props }) => {
 
 const PostPage: React.FC<Props> = props => {
   const post = getPost(props.slug)
-  const components: Partial<
-    Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents
-  > = {
-    code({ inline, className, children, ...props }) {
-      const match = /language-(\w+)/.exec(className || '')
-
-      return !inline && match ? (
-        <SyntaxHighlighter style={prismTheme} language={match[1]} PreTag="div">
-          {String(children).replace(/\n$/, '')}
-        </SyntaxHighlighter>
-      ) : (
-        <code className={className} {...props}>
-          {children}
-        </code>
-      )
-    },
-    a({ children, ...props }) {
-      const href = props.node.properties.href.toString()
-      if (href.startsWith('http')) return <a href={href}>{children[0]}</a>
-      return (
-        <Link href={href}>
-          <a>{children[0]}</a>
-        </Link>
-      )
-    },
-    h2({ children, ...props }) {
-      return h({ children, ...props })
-    },
-    h3({ children, ...props }) {
-      return h({ children, ...props })
-    },
-    h4({ children, ...props }) {
-      return h({ children, ...props })
-    },
-    h5({ children, ...props }) {
-      return h({ children, ...props })
-    },
-    h6({ children, ...props }) {
-      return h({ children, ...props })
-    },
-  }
 
   return (
     <>
@@ -98,7 +53,54 @@ const PostPage: React.FC<Props> = props => {
       />
 
       <div className={styles.markdown}>
-        <ReactMarkdown components={components}>{post.body}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            code({ inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '')
+
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={prismTheme}
+                  language={match[1]}
+                  PreTag="div"
+                >
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              )
+            },
+            a({ children, ...props }) {
+              const href = props.node.properties.href.toString()
+              if (href.startsWith('http'))
+                return <a href={href}>{children[0]}</a>
+              return (
+                <Link href={href}>
+                  <a>{children[0]}</a>
+                </Link>
+              )
+            },
+            h2({ children, ...props }) {
+              return h({ children, ...props })
+            },
+            h3({ children, ...props }) {
+              return h({ children, ...props })
+            },
+            h4({ children, ...props }) {
+              return h({ children, ...props })
+            },
+            h5({ children, ...props }) {
+              return h({ children, ...props })
+            },
+            h6({ children, ...props }) {
+              return h({ children, ...props })
+            },
+          }}
+        >
+          {post.body}
+        </ReactMarkdown>
       </div>
     </>
   )

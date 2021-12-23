@@ -42,7 +42,8 @@ const About: React.FC = () => {
       </div>
 
       <p className="text">
-        Tenho {getAge(new Date('2004-08-13'))} anos e sou um <strong>desenvolvedor full-stack com foco em back-end</strong>.
+        Tenho {getAge(new Date('2004-08-13'))} anos e sou um{' '}
+        <strong>desenvolvedor full-stack com foco em back-end</strong>.
       </p>
       <br />
       <p className="text">
