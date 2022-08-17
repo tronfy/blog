@@ -28,22 +28,22 @@ Alguns exemplos das capabilidades do renderizador customizado que implementei pa
 
 ```tsx
 interface Frontmatter {
-    title: string
-    description: string
-    date: string
-    tags: string[]
-  }
+  title: string
+  description: string
+  date: string
+  tags: string[]
+}
 
-  interface PostMeta {
-    frontmatter: Frontmatter
-    slug: string
-    readTime: number
-  }
+interface PostMeta {
+  frontmatter: Frontmatter
+  slug: string
+  readTime: number
+}
 
-  interface Post {
-    meta: PostMeta
-    body: string
-  }
+interface Post {
+  meta: PostMeta
+  body: string
+}
 ```
 
 ### Exemplo de post
