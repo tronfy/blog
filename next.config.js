@@ -1,6 +1,6 @@
 module.exports = {
-  experimental: {
-    styledComponents: true
+  compiler: {
+    styledComponents: true,
   },
   swcMinify: true,
   webpack: (config, { isServer }) => {
