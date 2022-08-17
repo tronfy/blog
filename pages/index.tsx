@@ -44,10 +44,10 @@ const Home: React.FC = () => {
               </Link>
             </li>
           </ul>
-          <p>
+          <p className={styles.email}>
             nicolasdschmidt
             <span>@</span>
-            pm.me
+            protonmail.com
           </p>
         </div>
       </div>
